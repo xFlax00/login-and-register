@@ -42,14 +42,14 @@ const Register = () => {
                             <span>Lembre-se</span>
                         </div>
                         
-                        <span>Esqueceu a senha?</span>
+                        <Link>Esqueceu a senha?</Link>
                 </label>
                 
 
                 <button>Cadastrar</button>
 
                 <Link to='/'>Já tem uma conta?</Link>
-                {!sucess ? erro && <p>{erro}</p> : <p>{sucess}</p>}
+                {!sucess ? erro && <p className='info'>{erro}</p> : <p className='info'>{sucess}</p>}
             </form>
         </div>
     )

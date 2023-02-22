@@ -31,7 +31,7 @@ const Login = () => {
                 <button>Entrar</button>
                 <Link to='/register'>Cadastrar-se</Link>
 
-                {erro && <p>{erro}</p>}
+                {erro && <p className='info'>{erro}</p>}
             </form>
         </div>
     )

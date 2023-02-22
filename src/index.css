@@ -31,6 +31,7 @@ form{
 
   text-align: start;
   font-size: 1.2rem;
+  position: relative;
 }
 
 .Register, .Login{
@@ -46,9 +47,12 @@ form input{
   border: none;
   border-bottom: 2px solid #00264D;
   background-color: transparent;
-  padding: 1rem 5rem;
+  padding: 1rem 0;
   font-family: inherit;
+  font-size: 1rem;
   outline: none;
+  width: 100%;
+  text-indent: 30px;
 }
 
 form input[type='checkbox']{
@@ -59,21 +63,24 @@ form input::placeholder{
   font-size: 1.1rem;
   color: #00264D;
   position: absolute;
-  left: 25px;
 }
 
 form label{
   font-weight: 500;
+  width: 80%;
 }
 
 form a{
   font-size: 1rem;
   text-decoration: none;
   color: #fff;
+  transition: .3s;
 }
 
-form a:hover{
+form a:hover, .Register span:hover{
+  transition: .3s;
   color: #00264D;
+  cursor: pointer;
 }
 
 button{
@@ -87,4 +94,10 @@ button{
   font-family: inherit;
   margin-top: 0.5rem;
   width: 80%;
+  cursor: pointer;
+}
+
+.info{
+  position: absolute;
+  bottom: -8vh;
 }
