@@ -6,9 +6,6 @@ import { useAuth } from './hooks/useAuth';
 import { useState, useEffect } from 'react';
 import { onAuthStateChanged } from 'firebase/auth'
 
-// Components
-import Navbar from './components/Navbar';
-
 // Pages
 import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'

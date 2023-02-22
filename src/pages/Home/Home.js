@@ -2,7 +2,7 @@ import { useAuth } from "../../hooks/useAuth"
 
 const Home = () => {
 
-    const { auth, logOut } = useAuth()
+    const { logOut } = useAuth()
 
     const handleClick = () => {
         logOut()

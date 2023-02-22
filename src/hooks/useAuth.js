@@ -20,6 +20,7 @@ export const useAuth = () => {
             setSucess('Usuário cadastrado com sucesso!')
         } catch (error) {
             console.error('Erro: ', error)
+            setSucess('')
             
             if(error.toString().includes('characters')){
                 setErro('Tamanho mínimo de 6 digitos para a senha.')
