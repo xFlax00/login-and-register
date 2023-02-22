@@ -77,7 +77,7 @@ form a{
   transition: .3s;
 }
 
-form a:hover, .Register span:hover{
+form a:hover, .Login span:hover{
   transition: .3s;
   color: #00264D;
   cursor: pointer;
@@ -99,5 +99,7 @@ button{
 
 .info{
   position: absolute;
-  bottom: -8vh;
+  bottom: -10vh;
+  width: 110%;
+  text-align: center;
 }

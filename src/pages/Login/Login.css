@@ -1,0 +1,43 @@
+#rec{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+}
+#rec a{
+    font-size: 0.8rem;
+}
+
+.rec{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 40px;
+}
+.rec input{
+    all: unset;
+    border: 1px solid black;
+    padding: .3rem;
+    margin-right: 5px;
+}
+.rec input:checked{
+    background-color: #00264D;
+}
+
+.rec input::after{
+    content: '';
+    position: absolute;
+    display: none;
+    left: 3px;
+    top: 0px;
+    width: 4px;
+    height: 8px;
+    border: solid #ffffffde;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.rec input:checked::after{
+    display: block;
+}

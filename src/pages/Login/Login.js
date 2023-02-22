@@ -28,6 +28,15 @@ const Login = () => {
                 <label>
                     <input type="password" name="password" placeholder="Senha" />
                 </label>
+                <label id='rec'>
+                        <div className='rec'>
+                            <input type="checkbox" name="rec"/>
+                            <span>Lembre-se</span>
+                        </div>
+                        
+                        <Link>Esqueceu a senha?</Link>
+                </label>
+                
                 <button>Entrar</button>
                 <Link to='/register'>Cadastrar-se</Link>
 
