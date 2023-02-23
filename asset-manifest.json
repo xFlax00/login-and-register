@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/login-and-register/static/css/main.8084b797.css",
+    "main.js": "/login-and-register/static/js/main.5dfdb462.js",
+    "index.html": "/login-and-register/index.html",
+    "main.8084b797.css.map": "/login-and-register/static/css/main.8084b797.css.map",
+    "main.5dfdb462.js.map": "/login-and-register/static/js/main.5dfdb462.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8084b797.css",
+    "static/js/main.5dfdb462.js"
+  ]
+}
