@@ -21,7 +21,6 @@ function App() {
     onAuthStateChanged(auth, (user) => {
       if(user){
         setUser(user)
-        console.log(user)
       }else{
         setUser(undefined)
       }
@@ -31,9 +30,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/login-and-register' element={<Navigate to='/'></Navigate>}/>
         <Route path='/' element={!user ? <Login /> : <Profile />}/>
         <Route path='/register' element={<Register />}/>
+        <Route path='/login-and-register' element={<Navigate to='/'></Navigate>}/>
       </Routes>
     </BrowserRouter>
   );

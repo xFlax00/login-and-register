@@ -30,7 +30,7 @@ const Register = () => {
 
         
         if(email===confirmEmail){
-            createUser(email, pass)
+            createUser(name, email, pass)
         }else{
             setError('Email não correspondente.')
             setDone('')
@@ -53,7 +53,7 @@ const Register = () => {
             <h1>Cadastro</h1>
             <form onSubmit={handleSubmit}>
                 <label>
-                    <input type="text" name="name" placeholder="Nome" onChange={(e) => setName(e.target.value)} value={name}/>
+                    <input type="text" name="name" placeholder="Nome" onChange={(e) => setName(e.target.value)} value={name} required/>
                 </label>
                 <label>
                     <input type="email" name="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email}/>

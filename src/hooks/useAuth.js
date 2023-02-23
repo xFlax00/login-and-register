@@ -11,11 +11,14 @@ export const useAuth = () => {
     const auth = getAuth(app)
 
     // Registering user
-    const createUser = async (email, password) => {
+    const createUser = async (name, email, password) => {
 
         try {
-            const user = await createUserWithEmailAndPassword(auth, email, password)
-            console.log(user)
+            await createUserWithEmailAndPassword(auth, email, password)
+
+            await updateProfile(auth.currentUser, {
+                displayName: name
+            })
 
             setSucess('Usuário cadastrado com sucesso!')
         } catch (error) {
@@ -32,15 +35,15 @@ export const useAuth = () => {
                 setErro('Erro na autenticação.')
             }
         }
-        
+
+        logOut()
     }
 
     // Sign in
     const signIn = async (email, password) => {
 
         try {
-            const user = await signInWithEmailAndPassword(auth, email, password)
-            console.log(user)
+            await signInWithEmailAndPassword(auth, email, password)
         } catch (error) {
             console.error('Erro:', error)
 
