@@ -20,21 +20,11 @@ const Register = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        const newUser = {
-            name,
-            email,
-            confirmEmail,
-            pass
-        }
-        console.log(newUser)
-
-        
         if(email===confirmEmail){
             createUser(name, email, pass)
         }else{
             setError('Email não correspondente.')
             setDone('')
-            console.log(sucess)
         }
         
         setName('')
