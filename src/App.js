@@ -9,7 +9,7 @@ import { onAuthStateChanged } from 'firebase/auth'
 // Pages
 import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
-import Home from './pages/Home/Home';
+import Profile from './pages/Profile/Profile';
 
 
 function App() {
@@ -21,6 +21,7 @@ function App() {
     onAuthStateChanged(auth, (user) => {
       if(user){
         setUser(user)
+        console.log(user)
       }else{
         setUser(undefined)
       }
@@ -31,7 +32,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/login-and-register' element={<Navigate to='/'></Navigate>}/>
-        <Route path='/' element={!user ? <Login /> : <Home />}/>
+        <Route path='/' element={!user ? <Login /> : <Profile />}/>
         <Route path='/register' element={<Register />}/>
       </Routes>
     </BrowserRouter>

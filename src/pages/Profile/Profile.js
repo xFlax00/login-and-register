@@ -1,6 +1,6 @@
 import { useAuth } from "../../hooks/useAuth"
 
-const Home = () => {
+const Profile = () => {
 
     const { logOut } = useAuth()
 
@@ -10,10 +10,10 @@ const Home = () => {
 
   return (
     <div>
-        <h1>Home</h1>
+        <h1>Profile</h1>
         <button onClick={handleClick}>Sair</button>
     </div>
   )
 }
 
-export default Home
+export default Profile
