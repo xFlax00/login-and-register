@@ -1,7 +1,7 @@
 {
   "name": "tela-login",
   "version": "0.1.0",
-  "homepage": "https://xflax00.github.io/login-and-register",
+  "homepage": "https://xflax00.github.io/login",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

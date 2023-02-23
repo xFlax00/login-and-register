@@ -30,9 +30,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={!user ? <Login /> : <Profile />}/>
+        <Route path='/login' element={!user ? <Login /> : <Profile />}/>
         <Route path='/register' element={<Register />}/>
-        <Route path='/login-and-register' element={<Navigate to='/'></Navigate>}/>
+        <Route path='/login-and-register' element={<Navigate to='/login'></Navigate>}/>
       </Routes>
     </BrowserRouter>
   );
