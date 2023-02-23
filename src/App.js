@@ -1,6 +1,6 @@
 import './App.css';
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
 import { useAuth } from './hooks/useAuth';
 import { useState, useEffect } from 'react';
@@ -30,6 +30,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path='/login-and-register' element={<Navigate to='/'></Navigate>}/>
         <Route path='/' element={!user ? <Login /> : <Home />}/>
         <Route path='/register' element={<Register />}/>
       </Routes>
