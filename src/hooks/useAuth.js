@@ -53,6 +53,8 @@ export const useAuth = () => {
                 setErro('Insira um email válido.')
             }else if(error.toString().includes('user-not-found')){
                 setErro('Email não cadastrado.')
+            }else{
+                setErro('Erro de autenticação.')
             }
         }
         
