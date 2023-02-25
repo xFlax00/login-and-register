@@ -41,3 +41,9 @@
 .rec input:checked::after{
     display: block;
 }
+
+@media (max-width: 320px){
+    #rec a, #rec span{
+      font-size: 0.65rem;
+    }
+  }
