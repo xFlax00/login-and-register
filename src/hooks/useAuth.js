@@ -7,11 +7,14 @@ export const useAuth = () => {
 
     const [erro, setErro] = useState('')
     const [sucess, setSucess] = useState('')
+    const [loading, setLoading] = useState()
 
     const auth = getAuth(app)
 
     // Registering user
     const createUser = async (name, email, password) => {
+
+        setLoading(true)
 
         try {
             await createUserWithEmailAndPassword(auth, email, password)
@@ -20,10 +23,12 @@ export const useAuth = () => {
                 displayName: name
             })
 
+            setLoading(false)
             setSucess('Usuário cadastrado com sucesso!')
         } catch (error) {
             console.error('Erro: ', error)
             setSucess('')
+            setLoading(false)
             
             if(error.toString().includes('characters')){
                 setErro('Tamanho mínimo de 6 digitos para a senha.')
@@ -41,10 +46,14 @@ export const useAuth = () => {
 
     // Sign in
     const signIn = async (email, password) => {
+        setLoading(true)
 
         try {
             await signInWithEmailAndPassword(auth, email, password)
+
+            setLoading(false)
         } catch (error) {
+            setLoading(false)
             console.error('Erro:', error)
 
             if(error.toString().includes('wrong-password')){
@@ -64,5 +73,5 @@ export const useAuth = () => {
         signOut(auth)
     }
 
-    return { auth, createUser, signIn, logOut, erro, sucess }
+    return { auth, createUser, signIn, logOut, erro, sucess, loading }
 }
