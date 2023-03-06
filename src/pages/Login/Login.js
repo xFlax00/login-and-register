@@ -17,8 +17,6 @@ const Login = () => {
         
         signIn(email, password)
 
-        console.log(rec)
-
         if(!rec){
             e.target.reset()
         }
