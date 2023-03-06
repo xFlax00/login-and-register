@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 const Register = () => {
 
-    const { createUser, erro, sucess } = useAuth()
+    const { createUser, erro, sucess, loading } = useAuth()
 
     const [error, setError] = useState()
     const [done, setDone] = useState()
@@ -58,7 +58,8 @@ const Register = () => {
                 <button>Cadastrar</button>
 
                 <Link to='/login'>Já tem uma conta?</Link>
-                {!done ? error && <p className='info'>{error}</p> : <p className='info'>{done}</p>}
+                {!loading && !done ? error && <p className='info'>{error}</p> : <p className='info'>{done}</p>}
+                {loading && <p className='info'>Carregando...</p>}
             </form>
         </div>
     )
