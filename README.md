@@ -47,4 +47,4 @@ http://localhost:3000/login-and-register/
 
 <br>
 
-Created by [xFlax00](https://github.comx/xflax00)
+Created by [xFlax00](https://github.com/xflax00)
